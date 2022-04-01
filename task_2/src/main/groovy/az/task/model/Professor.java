@@ -26,8 +26,8 @@ public class Professor {
     private String Surname;
     private String Department;
 
-    @ManyToMany(mappedBy = "tags")
-    private List<Course> posts = new ArrayList<>();
+    @ManyToMany(mappedBy = "professors")
+    private List<Course> courses = new ArrayList<>();
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false)
