@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Ramil
+      changes:
+        - addColumn:
+            tableName: courses
+            columns:
+              - column:
+                  name: name
+                  type: varchar(50)

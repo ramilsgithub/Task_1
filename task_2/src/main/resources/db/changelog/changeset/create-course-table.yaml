@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Ramil
+      changes:
+        - createTable:
+            tableName: courses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(30)
+              - column:
+                  name: department
+                  type: varchar(30)
+              - column:
+                  name: professor
+                  type: varchar(30)
+
+
+
+  - changeSet:
+      id: 3
+      author: Ramil
+      changes:
+        - renameColumn:
+            tableName: courses
+            newColumnName: course_id
+            oldColumnName: id
