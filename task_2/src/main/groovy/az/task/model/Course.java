@@ -39,7 +39,7 @@ public class Course {
             joinColumns = @JoinColumn(name = "id"),
             inverseJoinColumns = @JoinColumn(name = "id")
     )
-    private List<Professor> tags = new ArrayList<>();
+    private List<Professor> professors = new ArrayList<>();
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false)
